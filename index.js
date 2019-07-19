@@ -2,10 +2,10 @@ const express = require('express');
 const Datastore = require('nedb');
 const fetch = require('node-fetch');
 require('dotenv').config();
-console.log(process.env);
 
 const app = express();
-app.listen(5000, () => console.log('Listening at 5000...'));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Listening at ${port}...`));
 
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
