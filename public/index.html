@@ -3,21 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Weather Here</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+	<style>
+		#errMsg {
+			display: none;
+		}
+		#check-in {
+			display: block;
+			width: 115px;
+			height: 25px;
+			background: yellow;
+			padding: 5px;
+			text-decoration: none;
+			text-align: center;
+			border-radius: 5px;
+			color: black;
+			font-weight: bold; 
+			margin: 10px;
+		}
+	</style>
 </head>
-<body>
-	<h1>The Weather Here</h1>
-	<nav>
-		<a href="/">Check-in</a> | <a href="/checkins">View Checkins</a>
-	</nav>
+<body class="avenir w-100 h-100 flex flex-column justify-center items-center bg-black">
+	<h1 class="yellow f1 lh-title">The Weather Here</h1>
 
-	<p>
+	<p class="yellow f3 lh-copy tc">
 		The weather at latitude: <span id="latitude"></span>&deg; and longitude: <span id="longitude"></span>&deg; is <span id="summary"> </span> with a temperature of <span id="temp"> </span> &deg;C. 
 		<br>
 		<span id="airReading">The concentration of particulate matter (<span id="aq_parameter"></span>) is <span id="aq_value"></span> <span id="aq_units"></span> (last measured on <span id="aq_date"></span>).</span>
 		<span id="errMsg">We tried to fetch the air quality readings of your location but alas we were unable to do so.</span>
-		
 	</p>
+
+	<a  id="check-in" href="/">Check-in</a>
+	<a class="link yellow" href="/checkins">View Checkins</a>
 
 	<script src="script.js"></script>
 </body>

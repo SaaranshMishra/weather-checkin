@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Weather Here</title>
-	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
 	<link 
 		rel="stylesheet" 
 		href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -18,14 +18,15 @@
 	<style>
 		#checkinMap { 
 			height: 400px;
-			width: 1000px; 
+			width: 1000px;
+			margin: 25px; 
 		}
 	</style>
 </head>
-<body>
-	<h1>The Weather Here</h1>
+<body class="avenir w-100 h-100 flex flex-column justify-center items-center bg-black">
+	<h1 class="yellow f1 lh-title">The Weather Here</h1>
 	<nav>
-		<a href="/">Check-in</a> | <a href="/checkins">View Checkin</a>
+		<a class="yellow" href="/">Add Check-in</a>
 	</nav>
 
 	<div id="checkinMap"></div>
